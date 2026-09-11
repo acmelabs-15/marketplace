@@ -23,10 +23,19 @@ repository.
 
 Each plugin lives in its own repository. This repo carries one registry file per host:
 
-| File | Host | Points at the plugin with |
-|:--|:--|:--|
-| `.claude-plugin/marketplace.json` | Claude Code | `{"source": "github", "repo": "...", "ref": "latest"}` |
-| `.agents/plugins/marketplace.json` | Codex | `{"source": "url", "url": "...", "ref": "latest"}` |
+| File | Host |
+|:--|:--|
+| `.claude-plugin/marketplace.json` | Claude Code |
+| `.agents/plugins/marketplace.json` | Codex |
+
+Both name the plugin the same way:
+
+```json
+{ "source": "url", "url": "https://github.com/acmelabs-15/ask-user-question.git", "ref": "latest" }
+```
+
+The URL is written out in full rather than as `owner/repo` shorthand. Claude Code resolves that
+shorthand to an SSH remote, which fails on a machine with no key loaded.
 
 Both follow the `latest` tag. That tag lives in the plugin's repository and moves on every
 release that is not a pre-release, so a release reaches all three hosts at once and this repo

@@ -24,8 +24,8 @@
         "progressive-disclosure"
       ],
       "source": {
-        "source": "github",
-        "repo": "acmelabs-15/ask-user-question",
+        "source": "url",
+        "url": "https://github.com/acmelabs-15/ask-user-question.git",
         "ref": "latest"
       }
     }

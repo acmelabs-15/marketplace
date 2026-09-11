@@ -9,7 +9,7 @@
       "description": "Composes AskUserQuestion calls a human can answer on sight, and reads the replies that come back.",
       "source": {
         "source": "url",
-        "url": "acmelabs-15/ask-user-question",
+        "url": "https://github.com/acmelabs-15/ask-user-question.git",
         "ref": "latest"
       },
       "keywords": [
