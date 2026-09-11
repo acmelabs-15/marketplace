@@ -10,7 +10,6 @@
     {
       "name": "ask-user-question",
       "description": "Composes AskUserQuestion calls a human can answer on sight, and reads the replies that come back.",
-      "version": "0.1.5",
       "author": {
         "name": "Peter Kloss",
         "email": "pkloss@gmail.com"
@@ -26,7 +25,8 @@
       ],
       "source": {
         "source": "github",
-        "repo": "acmelabs-15/ask-user-question"
+        "repo": "acmelabs-15/ask-user-question",
+        "ref": "latest"
       }
     }
   ]

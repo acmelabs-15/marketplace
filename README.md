@@ -1,24 +1,36 @@
 # ACMElabs marketplace
 
-Claude Code plugins from [ACMElabs](https://github.com/acmelabs-15).
+Plugins from [ACMElabs](https://github.com/acmelabs-15), for three agent hosts.
 
 ## Use it
 
-```
-/plugin marketplace add acmelabs-15/marketplace
-/plugin install ask-user-question@acmelabs
-```
+| Host | Command |
+|:--|:--|
+| Claude Code | `/plugin marketplace add acmelabs-15/marketplace` then `/plugin install ask-user-question@acmelabs` |
+| Codex | `codex plugin marketplace add acmelabs-15/marketplace` then `codex plugin install ask-user-question` |
+| Gemini CLI | `gemini extensions install acmelabs-15/ask-user-question` |
+
+Gemini has no marketplace to add. It installs an extension straight from the plugin's own
+repository.
 
 ## Plugins
 
-| Plugin | Version | What it does |
-|---|---|---|
-| [ask-user-question](https://github.com/acmelabs-15/ask-user-question) | 0.1.5 | Composes AskUserQuestion calls a human can answer on sight, and reads the replies that come back. |
+| Plugin | What it does |
+|---|---|
+| [ask-user-question](https://github.com/acmelabs-15/ask-user-question) | Composes AskUserQuestion calls a human can answer on sight, and reads the replies that come back. |
 
 ## How this repo works
 
-`.claude-plugin/marketplace.json` is the registry. Each plugin lives in its own repository and is
-listed here with a `github` source, so a plugin's release cycle stays its own.
+Each plugin lives in its own repository. This repo carries one registry file per host:
 
-Each entry pins a `version`. A plugin's own pushes do not reach anyone until that string changes
-here, so an update is a deliberate act rather than a side effect of a commit.
+| File | Host | Points at the plugin with |
+|:--|:--|:--|
+| `.claude-plugin/marketplace.json` | Claude Code | `{"source": "github", "repo": "...", "ref": "latest"}` |
+| `.agents/plugins/marketplace.json` | Codex | `{"source": "url", "url": "...", "ref": "latest"}` |
+
+Both follow the `latest` tag. That tag lives in the plugin's repository and moves on every
+release that is not a pre-release, so a release reaches all three hosts at once and this repo
+needs no commit to publish one.
+
+No entry carries a version string. The tag decides what installs, and a second copy of the
+version here would go stale the moment a release ran.
