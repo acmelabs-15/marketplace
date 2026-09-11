@@ -1,0 +1,33 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "acmelabs",
+  "description": "Claude Code plugins from ACMElabs.",
+  "owner": {
+    "name": "Peter Kloss",
+    "email": "pkloss@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "ask-user-question",
+      "description": "Composes AskUserQuestion calls a human can answer on sight, and reads the replies that come back.",
+      "version": "0.1.5",
+      "author": {
+        "name": "Peter Kloss",
+        "email": "pkloss@gmail.com"
+      },
+      "homepage": "https://github.com/acmelabs-15/ask-user-question",
+      "repository": "https://github.com/acmelabs-15/ask-user-question",
+      "keywords": [
+        "askuserquestion",
+        "interaction-design",
+        "prompting",
+        "claude-code",
+        "progressive-disclosure"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "acmelabs-15/ask-user-question"
+      }
+    }
+  ]
+}
