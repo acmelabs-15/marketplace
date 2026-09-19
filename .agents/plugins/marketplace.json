@@ -18,6 +18,22 @@
         "prompting",
         "progressive-disclosure"
       ]
+    },
+    {
+      "name": "brain",
+      "description": "A development lifecycle for coding agents: agent-skills wrapped with a glossary, plain talk, and one question at a time.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/acmelabs-15/brain.git",
+        "ref": "latest"
+      },
+      "keywords": [
+        "skills",
+        "lifecycle",
+        "agent-skills",
+        "glossary",
+        "plain-language"
+      ]
     }
   ]
 }
