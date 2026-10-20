@@ -20,6 +20,7 @@ repository.
 |---|---|
 | [ask-user-question](https://github.com/acmelabs-15/ask-user-question) | Composes AskUserQuestion calls a human can answer on sight, and reads the replies that come back. |
 | [brain](https://github.com/acmelabs-15/brain) | A development lifecycle for coding agents: agent-skills wrapped with a glossary, plain talk, and one question at a time. For Claude Code, Codex, Gemini CLI and Antigravity CLI. |
+| [jev-gate](https://github.com/acmelabs-15/jev-gate) | A PreToolUse gate: Jev scores each side-effecting tool call for destructive, exfiltration, secrets and off-task risk. Shadow mode logs only. For Claude Code only. |
 
 ## How this repo works
 
