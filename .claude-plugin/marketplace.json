@@ -54,6 +54,29 @@
         "url": "https://github.com/acmelabs-15/brain.git",
         "ref": "latest"
       }
+    },
+    {
+      "name": "jev-gate",
+      "description": "A PreToolUse gate: Jev scores each side-effecting tool call for destructive, exfiltration, secrets and off-task risk. Shadow mode logs only.",
+      "author": {
+        "name": "Peter Kloss",
+        "email": "pkloss@gmail.com"
+      },
+      "homepage": "https://github.com/acmelabs-15/jev-gate",
+      "repository": "https://github.com/acmelabs-15/jev-gate",
+      "keywords": [
+        "hooks",
+        "pretooluse",
+        "guardrail",
+        "jev",
+        "typesafe",
+        "claude-code"
+      ],
+      "source": {
+        "source": "url",
+        "url": "https://github.com/acmelabs-15/jev-gate.git",
+        "ref": "latest"
+      }
     }
   ]
 }
