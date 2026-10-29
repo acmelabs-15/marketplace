@@ -5,21 +5,6 @@
   },
   "plugins": [
     {
-      "name": "ask-user-question",
-      "description": "Composes AskUserQuestion calls a human can answer on sight, and reads the replies that come back.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/acmelabs-15/ask-user-question.git",
-        "ref": "latest"
-      },
-      "keywords": [
-        "askuserquestion",
-        "interaction-design",
-        "prompting",
-        "progressive-disclosure"
-      ]
-    },
-    {
       "name": "brain",
       "description": "A development lifecycle for coding agents: agent-skills wrapped with a glossary, plain talk, and one question at a time.",
       "source": {

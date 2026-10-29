@@ -6,9 +6,9 @@ Plugins from [ACMElabs](https://github.com/acmelabs-15), for three agent hosts.
 
 | Host | Command |
 |:--|:--|
-| Claude Code | `/plugin marketplace add acmelabs-15/marketplace` then `/plugin install ask-user-question@acmelabs` |
-| Codex | `codex plugin marketplace add acmelabs-15/marketplace` then `codex plugin install ask-user-question` |
-| Gemini CLI | `gemini extensions install acmelabs-15/ask-user-question` or `acmelabs-15/brain` |
+| Claude Code | `/plugin marketplace add acmelabs-15/marketplace` then `/plugin install brain@acmelabs` |
+| Codex | `codex plugin marketplace add acmelabs-15/marketplace` then `codex plugin add brain@acmelabs` |
+| Gemini CLI | `gemini extensions install https://github.com/acmelabs-15/brain` |
 | Antigravity CLI | `agy plugin install https://github.com/acmelabs-15/brain.git` |
 
 Gemini has no marketplace to add. It installs an extension straight from the plugin's own
@@ -18,9 +18,16 @@ repository.
 
 | Plugin | What it does |
 |---|---|
-| [ask-user-question](https://github.com/acmelabs-15/ask-user-question) | Composes AskUserQuestion calls a human can answer on sight, and reads the replies that come back. |
 | [brain](https://github.com/acmelabs-15/brain) | A development lifecycle for coding agents: agent-skills wrapped with a glossary, plain talk, and one question at a time. For Claude Code, Codex, Gemini CLI and Antigravity CLI. |
 | [jev-gate](https://github.com/acmelabs-15/jev-gate) | A PreToolUse gate: Jev scores each side-effecting tool call for destructive, exfiltration, secrets and off-task risk. Shadow mode logs only. For Claude Code only. |
+
+### Retired
+
+[ask-user-question](https://github.com/acmelabs-15/ask-user-question) was retired on
+2026-10-28. Its skill ships in brain from v0.7.0, under the same name. Neither registry
+lists it now. Claude Code's `renames` map in `.claude-plugin/marketplace.json` names it
+`null`, so a user who still has it enabled sees that it was removed. Its repository says how
+to move to brain.
 
 ## How this repo works
 
@@ -34,7 +41,7 @@ Each plugin lives in its own repository. This repo carries one registry file per
 Both name the plugin the same way:
 
 ```json
-{ "source": "url", "url": "https://github.com/acmelabs-15/ask-user-question.git", "ref": "latest" }
+{ "source": "url", "url": "https://github.com/acmelabs-15/brain.git", "ref": "latest" }
 ```
 
 The URL is written out in full rather than as `owner/repo` shorthand. Claude Code resolves that
